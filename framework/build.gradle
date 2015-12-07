@@ -18,18 +18,11 @@
 
 
 
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0+'
-    }
-
-}
 
 apply plugin: 'android-library'
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.broglep-koubachi'
+
 
 ext {
     apply from: 'cordova.gradle'
@@ -40,7 +33,7 @@ ext {
 android {
     compileSdkVersion cdvCompileSdkVersion
     buildToolsVersion cdvBuildToolsVersion
-    publishNonDefault true
+    publishNonDefault false
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_6
